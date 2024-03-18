@@ -81,8 +81,11 @@ main{
     display: table;
 }
 
-.points{
-    
+#points{
+    text-align: center;
+    font-size: 25px;
+    margin-top: -20px;
+    margin-bottom: 10px;
 }
 
 .game-end{
