@@ -31,13 +31,6 @@ function generateUniqueRandomNumber(min, max, blacklist){
     return randomNumber;
 }
 
-// funzione termine gioco
-function lose(){
-    const lose = document.createElement('div');
-    lose.className = 'game-end';
-    grid.append(lose);
-}
-
 let play = document.getElementById('play');
 play.addEventListener('click', function(){
     // punteggio
@@ -71,7 +64,8 @@ play.addEventListener('click', function(){
                 if(list.includes(i + 1)){
                     console.log('Hai perso')
                     newSquare.classList.add('bomb-red');
-                    lose();
+                    let gameEnd = document.getElementById('game-end');
+                    gameEnd.classList.add('game-end')
                     points.innerHTML = (`Mi dispiace hai perso, il tuo punteggio è stato di: ${actualScore - 1} punti`)
                 }
             });
@@ -99,7 +93,8 @@ play.addEventListener('click', function(){
                 if(list.includes(i + 1)){
                     console.log('Hai perso')
                     newSquare.classList.add('bomb-red');
-                    lose();
+                    let gameEnd = document.getElementById('game-end');
+                    gameEnd.classList.add('game-end')
                     points.innerHTML = (`Mi dispiace hai perso, il tuo punteggio è stato di: ${actualScore - 1} punti`)
                 }
             });
@@ -125,7 +120,8 @@ play.addEventListener('click', function(){
                 if(list.includes(i + 1)){
                     console.log('Hai perso')
                     newSquare.classList.add('bomb-red');
-                    lose();
+                    let gameEnd = document.getElementById('game-end');
+                    gameEnd.classList.add('game-end')
                     points.innerHTML = (`Mi dispiace hai perso, il tuo punteggio è stato di: ${actualScore - 1} punti`)
                 }
                 console.log(`Hai selezionato la casella numero: ${i + 1}`);    
