@@ -5,6 +5,7 @@ let container = document.getElementById('container');
 function generateNewElementGrid(content){
 
     let newElement = document.createElement('div');
+    newElement.innerHTML = '<span>' + content + '</span>';
     newElement.classList.add('square-easy');
     return newElement;
 }
@@ -54,7 +55,7 @@ play.addEventListener('click', function(){
             console.log(list);
         }
         for (let i = 0; i < 49; i++) {
-            let newSquare = generateNewElementGrid()
+            let newSquare = generateNewElementGrid(i + 1)
             newSquare.classList.add('hard')
             // aggiungo quadrato alla grid
             gridElement.appendChild(newSquare);
@@ -82,7 +83,7 @@ play.addEventListener('click', function(){
             console.log(list);
         }
         for (let i = 0; i < 81; i++) {
-            let newSquare = generateNewElementGrid()
+            let newSquare = generateNewElementGrid(i + 1)
             newSquare.classList.add('medium')
             // aggiungo quadrato alla grid
             gridElement.appendChild(newSquare);
@@ -110,7 +111,7 @@ play.addEventListener('click', function(){
             console.log(list)
         }
         for (let i = 0; i < 100; i++) {
-            let newSquare = generateNewElementGrid()
+            let newSquare = generateNewElementGrid(i + 1)
             // aggiungo quadrato alla grid
             gridElement.appendChild(newSquare);
             // coloro di azzurro quando clicco il quadrato
