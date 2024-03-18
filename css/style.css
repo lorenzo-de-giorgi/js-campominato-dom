@@ -1,0 +1,78 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    margin-top: 50px;
+}
+
+/* BOTTONE */
+.button-wrapper {
+    display:flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    display: none;
+}
+
+.play-wrapper{
+    display:flex;
+    padding: 30px;
+}
+
+/* GRIGLIA PER QUADRATI */
+#grid{
+    margin: 0 auto;
+    width: 700px;
+    height: 700px;
+    border: 1px solid black;
+    display: none;
+}
+/* QUADRATI */
+.square-easy{
+    float: left;
+    border: 1px solid black;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    cursor: crosshair;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hard{
+    float: left;
+    border: 1px solid black;
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    cursor: crosshair;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.medium{
+    float: left;
+    border: 1px solid black;
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    cursor: crosshair;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.square-click{
+    background-color: #7fffd4;
+}
+
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: table;
+}
